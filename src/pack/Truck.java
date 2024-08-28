@@ -2,6 +2,7 @@ package pack;
 
 public class Truck extends Car{
 
+
     //конструктор
     public Truck(String modelName, int wheelsCount){
         super(modelName, wheelsCount);
