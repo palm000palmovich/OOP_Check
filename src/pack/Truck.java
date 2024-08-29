@@ -1,5 +1,6 @@
 package pack;
 
+
 public class Truck extends Car{
 
 

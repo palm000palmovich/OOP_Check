@@ -1,5 +1,6 @@
 package pack;
 
+
 public interface Vehicle {
     //геттеры
     String getModelName();
