@@ -8,6 +8,7 @@ public class Truck extends Car{
         super(modelName, wheelsCount);
     }
 
+    //Внутренние методы
     public void updateTyre() {
         System.out.println("Меняем покрышку");
     }
@@ -18,5 +19,11 @@ public class Truck extends Car{
 
     public void checkTrailer() {
         System.out.println("Проверяем прицеп");
+    }
+    //////////////////////////////////
+
+    @Override
+    public String toString() {
+        return "Модель: " + getModelName() + ", количество колес: " + getWheelsCount();
     }
 }
