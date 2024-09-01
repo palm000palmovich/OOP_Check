@@ -10,8 +10,8 @@ public class Truck extends Car{
     }
 
     //Внутренние методы
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
+    public String updateTyre() {
+        return "Меняем покрышку";
     }
 
     public void checkEngine() {
@@ -27,4 +27,17 @@ public class Truck extends Car{
     public String toString() {
         return "Модель: " + getModelName() + ", количество колес: " + getWheelsCount();
     }
+
+    //Чекер
+    public void Check(){
+        if (getModelName() != null && getWheelsCount() != 0){
+            System.out.println("Обслуживаем " + getModelName());
+            for (int i = 0; i < getWheelsCount(); i++) {
+                System.out.println(updateTyre() + " " + (i+1));
+            }
+            checkEngine();
+            checkTrailer();
+        }
+    }
+
 }

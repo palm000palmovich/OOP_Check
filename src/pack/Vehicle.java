@@ -13,10 +13,11 @@ public interface Vehicle {
     void setWheelsCount(int wheelsCount);
 
     //Внутренние методы
-    void updateTyre();
+    String updateTyre();
 
     void checkEngine();
-    public void checkTrailer();
+    void checkTrailer();
+    void Check();
 
     @Override
     String toString();
