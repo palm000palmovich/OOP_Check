@@ -1,36 +1,29 @@
 package pack;
 
 
-public class Bicycle extends Car{
+public class Bicycle extends Vehicle {
 
-
-    //конструктор
-    public Bicycle(String modelName, int wheelsCount){
-        super(modelName, wheelsCount);
+    public Bicycle(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount); // Устанавливаем количество колес для велосипеда
     }
-
-    //Внутренние методы
-    public String updateTyre() {
-        return "Меняем покрышку";
-    }
-
-
-    public void checkTrailer() {}
-    ////////////////////////////
 
     @Override
-    public String toString() {
-        return "Модель: " + getModelName() + ", количество колес: " + getWheelsCount();
+    public String updateTyre() {
+        return "Меняем покрышку на велосипеде ";
+    }
+
+    @Override
+    public void checkEngine() {
+        throw new UnsupportedOperationException("У велосипеда нет двигателя");
     }
 
     //Чекер
-    public void Check(){
-        if (getModelName() != null && getWheelsCount() != 0){
+    public void Check() {
+        if (getModelName() != null && getWheelsCount() != 0) {
             System.out.println("Обслуживаем " + getModelName());
             for (int i = 0; i < getWheelsCount(); i++) {
-                System.out.println(updateTyre() + " " + (i+1));
+                System.out.println(updateTyre() + " " + (i + 1));
             }
         }
     }
-
 }

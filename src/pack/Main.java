@@ -11,13 +11,9 @@ public class Main {
         Vehicle bicycle1 = new Bicycle("bicycle1", 2);
         Vehicle bicycle2 = new Bicycle("bicycle2", 2);
 
-        ServiceStation station = new ServiceStation();
-        station.check(car1, null, null);
-        station.check(car2, null, null);
-        station.check(null, bicycle1, null);
-        station.check(null, bicycle2, null);
-        station.check(null, null, truck1);
-        station.check(null, null, truck2);
 
+        car1.Check();
+        truck1.Check();
+        bicycle1.Check();
     }
 }

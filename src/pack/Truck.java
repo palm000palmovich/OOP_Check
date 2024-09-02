@@ -1,43 +1,36 @@
 package pack;
 
 
-public class Truck extends Car{
+public class Truck extends Vehicle {
 
-
-    //конструктор
-    public Truck(String modelName, int wheelsCount){
-        super(modelName, wheelsCount);
+    public Truck(String modelName, int wheelsCount) {
+        super(modelName, wheelsCount); // Устанавливаем количество колес для грузовика
     }
 
-    //Внутренние методы
+    @Override
     public String updateTyre() {
-        return "Меняем покрышку";
+        return "Меняем покрышку грузовика";
     }
 
+    @Override
     public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+        System.out.println("Проверяем двигатель грузовика " + modelName);
     }
 
     public void checkTrailer() {
-        System.out.println("Проверяем прицеп");
-    }
-    //////////////////////////////////
-
-    @Override
-    public String toString() {
-        return "Модель: " + getModelName() + ", количество колес: " + getWheelsCount();
+        System.out.println("Проверяем прицеп грузовика " + modelName);
     }
 
     //Чекер
-    public void Check(){
-        if (getModelName() != null && getWheelsCount() != 0){
+    public void Check() {
+        if (getModelName() != null && getWheelsCount() != 0) {
             System.out.println("Обслуживаем " + getModelName());
             for (int i = 0; i < getWheelsCount(); i++) {
-                System.out.println(updateTyre() + " " + (i+1));
+                System.out.println(updateTyre() + " " + (i + 1));
             }
             checkEngine();
             checkTrailer();
         }
     }
-
 }
+

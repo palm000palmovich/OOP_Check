@@ -1,24 +1,26 @@
 package pack;
 
+public abstract class Vehicle {
+    protected String modelName;
+    protected int wheelsCount;
 
-public interface Vehicle {
-    //геттеры
-    String getModelName();
+    public Vehicle(String modelName, int wheelsCount) {
+        this.modelName = modelName;
+        this.wheelsCount = wheelsCount;
+    }
 
-    int getWheelsCount();
+    public String getModelName() {
+        return modelName;
+    }
 
-    //сеттеры
-    void setModelName(String modelName);
+    public int getWheelsCount() {
+        return wheelsCount;
+    }
 
-    void setWheelsCount(int wheelsCount);
+    public abstract String updateTyre();
 
-    //Внутренние методы
-    String updateTyre();
-
-    void checkEngine();
-    void checkTrailer();
-    void Check();
-
-    @Override
-    String toString();
+    public abstract void checkEngine();
+    public abstract void Check();
 }
+
+
