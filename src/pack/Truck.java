@@ -12,7 +12,6 @@ public class Truck extends Vehicle {
         return "Меняем покрышку грузовика";
     }
 
-    @Override
     public void checkEngine() {
         System.out.println("Проверяем двигатель грузовика " + modelName);
     }

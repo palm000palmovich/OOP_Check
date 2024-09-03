@@ -34,9 +34,8 @@ public  class Car extends Vehicle {
         return "Меняем покрышку";
     }
 
-    @Override
     public void checkEngine() {
-        System.out.println("Проверяем двигатель");
+        System.out.println("Проверяем двигатель атомобиля" + getModelName());
     }
 
     public void checkTrailer() {}

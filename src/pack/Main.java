@@ -11,7 +11,6 @@ public class Main {
         Vehicle bicycle1 = new Bicycle("bicycle1", 2);
         Vehicle bicycle2 = new Bicycle("bicycle2", 2);
 
-
         car1.Check();
         truck1.Check();
         bicycle1.Check();

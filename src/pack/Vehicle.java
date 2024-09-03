@@ -19,7 +19,6 @@ public abstract class Vehicle {
 
     public abstract String updateTyre();
 
-    public abstract void checkEngine();
     public abstract void Check();
 }
 

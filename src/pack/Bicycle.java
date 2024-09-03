@@ -12,11 +12,6 @@ public class Bicycle extends Vehicle {
         return "Меняем покрышку на велосипеде ";
     }
 
-    @Override
-    public void checkEngine() {
-        throw new UnsupportedOperationException("У велосипеда нет двигателя");
-    }
-
     //Чекер
     public void Check() {
         if (getModelName() != null && getWheelsCount() != 0) {
